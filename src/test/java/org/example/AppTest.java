@@ -21,7 +21,6 @@ public class AppTest {
     public void zeroLessThenOneReversed() {
         int max = App.max(0, 1);
         assertEquals(1, max);
+
     }
-
-
 }
