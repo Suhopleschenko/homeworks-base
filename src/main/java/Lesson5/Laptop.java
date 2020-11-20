@@ -42,7 +42,6 @@ public class Laptop {
                 }
             } else {                                                            // working
                 System.out.println("Computer is working.");
-                turnOn = true;
                 Computer.start();
             }
         }
