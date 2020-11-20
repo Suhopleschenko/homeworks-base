@@ -7,37 +7,35 @@ public class Computer {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
-        int processor = 4;
-        int ram = 8;
-        int ssd = 512;
-        int numberOfCycle = 5;
-        System.out.println("Что вы хотите сделать: 1 - вывести параметры компа " +
-                "2 - включить комп " +
-                "3 - выключить комп");
+        start();
+
+    }
+
+    public static void start() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What do you want to do?: \n1 - show parameters of laptop \n2 - turn on laptop \n3 - turn off laptop");
         int a = sc.nextInt();
-        if (a < 1 || a > 3) {
-            System.out.println("Error");
-        }
         if (a == 1) {
-            System.out.printf("Processor: 8 core %d GHz, RAM: %d GB, SSD: %d GB \n", processor, ram, ssd);
+            Laptop.parametersOfComputer();
         }
-        if (a == 2) {
-            int b = r.nextInt(11);
-            System.out.println(b);
-            if (b > 4) {
-                int c = r.nextInt(2);
-                System.out.println("Error. Enter 1 or 0");
-                int n = sc.nextInt();
-                int userEnter = 0;
-                if (c == n) {
-                    while (userEnter == 0) {
-                        System.out.println("Computer is working. Do you want to turn it off? 1 - YES 0 - NO");
-                        userEnter = sc.nextInt();
-                    }
-                } else {
-                    System.out.println("ALARM! Computer burned out!");
-                }
-            }
+        if (a == 2 && Laptop.turnOn == false && Laptop.bernOut == false) {
+            Laptop.loadingLaptop();
+        } else if (a == 2 && Laptop.bernOut == true) {
+            System.out.println("Computer burned out!");
+            start();
+        } else if (a == 2 && Laptop.turnOn == true) {
+            System.out.println("Computer is already working.");
+            start();
+        }
+        if (a == 3 && Laptop.turnOn == false && Laptop.bernOut == false) {
+            System.out.println("Laptop is already off");
+            start();
+        } else if (a == 3 && Laptop.turnOn == true) {
+            Laptop.shutdownLaptop();
+            start();
+        } else if (a == 3 && Laptop.bernOut == true) {
+            System.out.println("Computer burned out!");
+            start();
         }
     }
 }
