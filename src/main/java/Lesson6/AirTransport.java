@@ -1,16 +1,12 @@
 package Lesson6;
 
-public class AirTransport {
+import Lesson6.Mechanisms.Transport;
+
+public class AirTransport extends Transport {
     int wingspan;
     int minLengthRunway;
-}
 
-class Civil {
-    int numberPassengers;
-    boolean businessClass;
-}
-
-class Military {
-    boolean ejectionSystem;
-    int numberOfMissiles;
+    public AirTransport(int power) {
+        super();
+    }
 }

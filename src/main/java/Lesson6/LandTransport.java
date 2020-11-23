@@ -1,16 +1,9 @@
 package Lesson6;
 
-public class LandTransport {
+import Lesson6.Mechanisms.Transport;
+
+public class LandTransport extends Transport {
     int numberOfWheels;
-    double fuelConsumption;
-}
-
-class PassengersCar {
-    String bodyType;
-    int numberPassengers;
-}
-
-class FreightCar {
-    int carrying;
+    public static double fuelConsumption;
 }
 
