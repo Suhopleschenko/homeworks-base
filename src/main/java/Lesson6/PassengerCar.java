@@ -2,13 +2,13 @@ package Lesson6;
 
 import java.util.Scanner;
 
-public class PassengerCar extends Mechanisms.Transport {
+public class PassengerCar extends LandTransport {
     Scanner sc = new Scanner(System.in);
     String bodyType;
     int numberPassengers;
     public double powerkw;
-    public double spentFuel;
-    public double time;
+    public static double time;
+    public static double spentFuel;
 
     public void passengerCar() {
         power = 200;
@@ -18,17 +18,19 @@ public class PassengerCar extends Mechanisms.Transport {
         bodyType = "sedan";
         numberPassengers = 5;
         powerInKW();
-        System.out.printf("Power: %d hp, MaxSpeed: %d km/h, Weight: %d Kg, Car brand: %s, Type: %s, Number of passengers: %d, Power in kW: %s\n",
-                power, maxSpeed, weight, carBrand, bodyType, numberPassengers, powerkw);
+        numberOfWheels = 4;
+        System.out.printf("Power: %d hp, MaxSpeed: %d km/h, Weight: %d Kg, Car brand: %s, Type: %s, Number of passengers: %d," +
+                        " Power in kW: %s, Number of wheels: %d\n",
+                power, maxSpeed, weight, carBrand, bodyType, numberPassengers, powerkw, numberOfWheels);
     }
 
-    public void powerInKW() {
+    private void powerInKW() {
         powerkw = power * 0.74;
     }
 
     private void fuel() {
-        LandTransport.fuelConsumption = 12;
-        spentFuel = time * maxSpeed / 100 * LandTransport.fuelConsumption;
+        fuelConsumption = 12;
+        spentFuel = time * maxSpeed / 100 * fuelConsumption;
     }
 
     public void road() {

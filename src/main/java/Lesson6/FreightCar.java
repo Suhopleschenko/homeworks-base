@@ -2,7 +2,7 @@ package Lesson6;
 
 import java.util.Scanner;
 
-public class FreightCar extends Mechanisms.Transport {
+public class FreightCar extends LandTransport {
     Scanner sc = new Scanner(System.in);
     int liftingCapacity;
     public double powerkw;
@@ -14,16 +14,18 @@ public class FreightCar extends Mechanisms.Transport {
         carBrand = "Scania";
         liftingCapacity = 50;
         powerInKW();
-        System.out.printf("Power: %d hp, MaxSpeed: %d km/h, Weight: %d Kg, Car brand: %s, Lifting capacity: %d t, Power in kW: %s\n",
-                power, maxSpeed, weight, carBrand, liftingCapacity, powerkw);
+        numberOfWheels = 10;
+        System.out.printf("\nPower: %d hp, MaxSpeed: %d km/h, Weight: %d Kg, Car brand: %s, Lifting capacity: %d tons," +
+                        " Power in kW: %s, Number of wheels %d\n",
+                power, maxSpeed, weight, carBrand, liftingCapacity, powerkw, numberOfWheels);
     }
 
-    public void powerInKW() {
+    private void powerInKW() {
         powerkw = power * 0.74;
     }
 
     public void cargo() {
-        System.out.println("Enter lifting capacity");
+        System.out.println("Enter cargo weight in tons:");
         int lifting = sc.nextInt();
         if (lifting < 0) {
             System.out.println("ERROR");

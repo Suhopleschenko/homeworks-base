@@ -1,9 +1,7 @@
 package Lesson6;
 
-import Lesson6.Mechanisms.Transport;
 
-public class LandTransport extends Transport {
+public class LandTransport extends Mechanisms.Transport {
     int numberOfWheels;
-    public static double fuelConsumption;
+    double fuelConsumption;
 }
-
