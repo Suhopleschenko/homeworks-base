@@ -2,7 +2,7 @@ package Lesson7.cosmodrome;
 
 import java.util.Random;
 
-public class Shuttle implements IStart {
+public class Spaceship implements IStart {
     @Override
     public boolean cheсkSystem() {
         Random random = new Random();
@@ -15,7 +15,7 @@ public class Shuttle implements IStart {
     }
 
     public void engineStart() throws InterruptedException {
-        System.out.println("Двигатели Шатла запущены. Все системы в норме.");
+        System.out.println("Двигатели Космолета запущены. Все системы в норме.");
         int n;
         int i = 10;
         for (n = 10; n > 0; n--) {
@@ -27,6 +27,6 @@ public class Shuttle implements IStart {
 
     @Override
     public void start() {
-        System.out.println("\nСтарт Шатла");
+        System.out.println("\nВзлет Космолета");
     }
 }

@@ -15,8 +15,15 @@ public class Space implements IStart {
     }
 
     @Override
-    public void engineStart() {
+    public void engineStart() throws InterruptedException {
         System.out.println("Идет построение маршрута");
+        int m;
+        int k = 10;
+        for (m = 10; m > 0; m--) {
+            System.out.print(k + "%...");
+            Thread.sleep(200);
+            k = k + 10;
+        }
     }
 
     @Override
