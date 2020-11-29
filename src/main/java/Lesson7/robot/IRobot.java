@@ -6,7 +6,6 @@ public interface IRobot {
 
     /**
      * Get the cost of a robot
-     *
      * @return int
      */
     int getPrice();
