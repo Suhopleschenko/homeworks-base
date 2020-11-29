@@ -9,13 +9,6 @@ public class Robot implements IRobot {
     private IHand hand;
     private ILeg leg;
 
-//    public Robot(IHead head, IHand hand, ILeg leg) {
-//        this.head = head;
-//        this.hand = hand;
-//        this.leg = leg;
-//    }
-//
-//    public Robot(){}
 
     public IHead getHead() {
         return head;

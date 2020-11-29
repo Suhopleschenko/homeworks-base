@@ -35,8 +35,9 @@ public class Run {
         robot3.action();
         System.out.println("Стоимость робота №3: " + robot3.getPrice());
         System.out.println();
-        System.out.println(robot1.getPrice() > robot2.getPrice() && robot1.getPrice() > robot3.getPrice() ? "Робот №1 самый дорогой" : robot2.getPrice() > robot1.getPrice() &&
-                robot2.getPrice() > robot3.getPrice() ? "Робот №2 самый дорогой" : "Робот №3 самый дорогой");
+        System.out.println(robot1.getPrice() > robot2.getPrice() && robot1.getPrice() > robot3.getPrice() ? "Робот №1 самый дорогой" :
+                robot2.getPrice() > robot1.getPrice() && robot2.getPrice() > robot3.getPrice() ? "Робот №2 самый дорогой" :
+                        "Робот №3 самый дорогой");
         /*
         Создать по 3 реализации(Sony, Toshiba, Samsung) каждой запчасти(IHead, IHand, ILeg)
         Класс SonyHead является примером реализацией головы от Sony.
