@@ -4,7 +4,7 @@ import Lesson7.human.HumanNew;
 
 public class Jeans implements Pants {
     HumanNew.Human human = new HumanNew.Human();
-    String pants = human.setJacket("camelot");
+    String pants = human.setPants("camelot");
 
     public void putOn() {
         System.out.println("надел джинсы " + pants);
