@@ -9,7 +9,7 @@ public class StartEngine {
             System.out.println(e.getMessage());
         }
         Car audi = new Car();
-        audi.brand = "Audi";
+        audi.setBrand("Audi");
         try {
             audi.start();
         } catch (FailStartException e) {
