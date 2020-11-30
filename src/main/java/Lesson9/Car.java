@@ -3,7 +3,15 @@ package Lesson9;
 import java.util.Random;
 
 public class Car {
-    String brand;
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    private String brand;
     int speed;
     int price;
 
