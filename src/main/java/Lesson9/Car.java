@@ -3,6 +3,10 @@ package Lesson9;
 import java.util.Random;
 
 public class Car {
+    private String brand;
+    int speed;
+    int price;
+
     public String getBrand() {
         return brand;
     }
@@ -10,10 +14,6 @@ public class Car {
     public void setBrand(String brand) {
         this.brand = brand;
     }
-
-    private String brand;
-    int speed;
-    int price;
 
     public Car(String brand, int speed, int price) {
         this.brand = brand;
@@ -30,7 +30,7 @@ public class Car {
         if (a % 2 == 0) {
             throw new FailStartException("error " + brand + " не завелся");
         } else {
-            System.out.println(brand + "завелся");
+            System.out.println(brand + " завелся");
         }
     }
 }
